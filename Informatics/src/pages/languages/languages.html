@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мови</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../../global.css" />
+  </head>
+  <body class="bg-[#111827] text-black fira-sans-light">
+    <header
+      class="min-h-[600px] h-screen w-full bg-fixed bg-cover bg-center flex items-start justify-end text-white relative"
+      style="background-image: url('img/languages-photo.avif')"
+    >
+      <div
+        class="w-full h-[80px] bg-white fixed top-0 left-0 z-50 border-b-[10px] border-black"
+      >
+        <div
+          class="max-w-[1200px] mx-auto w-full h-full flex items-center justify-end px-4"
+        >
+          <button
+            id="menu-toggle"
+            class="w-10 h-10 bg-transparent flex flex-col items-center justify-center space-y-[5px]"
+          >
+            <span class="w-6 h-0.5 bg-black block"></span>
+            <span class="w-6 h-0.5 bg-black block"></span>
+            <span class="w-6 h-0.5 bg-black block"></span>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="menu-overlay"
+        class="fixed top-0 right-0 h-full w-[366px] bg-white border-l-[10px] border-black shadow-lg flex flex-col pt-24 pr-6 space-y-4 transform translate-x-full transition-transform duration-500 ease-in-out z-40"
+      >
+        <a
+          href="../index/index.html"
+          class="text-black py-4 px-6 text-right font-medium rounded hover:bg-gray-100 transition"
+          >Головна</a
+        >
+        <a
+          href="../programming/programming.html"
+          class="text-black py-4 px-6 text-right font-medium rounded hover:bg-gray-100 transition"
+          >Програмування</a
+        >
+        <a
+          href="../languages/languages.html"
+          class="text-black py-4 px-6 text-right font-medium rounded hover:bg-gray-100 transition"
+          >Мови</a
+        >
+        <a
+          href="../literature/literature.html"
+          class="text-black py-4 px-6 text-right font-medium rounded hover:bg-gray-100 transition"
+          >Література</a
+        >
+      </div>
+
+      <div
+        class="w-full max-w-[1153px] mx-auto px-6 sm:px-10 flex justify-end pt-32 sm:pt-48"
+      >
+        <h1 class="text-3xl sm:text-4xl font-bold drop-shadow-lg">Мови</h1>
+      </div>
+    </header>
+
+    <section class="bg-[#819acb] py-16 text-white my-[129px]">
+      <div class="min-h-[80px] flex items-center justify-center mb-10">
+        <h2
+          id="language-title"
+          class="text-center text-2xl md:text-3xl font-bold transition-opacity duration-500"
+        >
+          Я володію трьома мовами:
+        </h2>
+      </div>
+
+      <div
+        class="flex items-center justify-center gap-4 px-4 w-full max-w-[1100px] mx-auto"
+      >
+        <button onclick="slideCarousel(-1)" class="hidden sm:block">
+          <img
+            src="../../svg/arrow.svg"
+            alt="arrow-left-icon"
+            class="rotate-180 w-6 h-6"
+          />
+        </button>
+
+        <div class="flex flex-col items-center w-full sm:w-auto">
+          <div class="overflow-hidden w-full max-w-[920px] py-2">
+            <div
+              id="carousel-track"
+              class="flex transition-transform duration-500 ease-in-out w-full"
+            >
+              <div
+                class="flex justify-center gap-4 flex-wrap w-full shrink-0 px-6 md:px-0"
+              >
+                <div
+                  class="bg-white text-black shadow-xl rounded-xl w-full sm:w-[250px] h-[300px] flex flex-col items-center justify-center [box-shadow:6px_6px_3px_rgba(0,0,0,0.25)]"
+                >
+                  <img
+                    src="https://flagcdn.com/de.svg"
+                    class="w-8 h-5"
+                    alt="german-flag-icon"
+                  />
+                  <p class="mt-4 font-semibold">Німецька</p>
+                </div>
+                <div
+                  class="bg-white text-black shadow-xl rounded-xl w-full sm:w-[250px] h-[300px] flex flex-col items-center justify-center [box-shadow:6px_6px_3px_rgba(0,0,0,0.25)]"
+                >
+                  <img
+                    src="https://flagcdn.com/us.svg"
+                    class="w-8 h-5"
+                    alt="usa-flag-icon"
+                  />
+                  <p class="mt-4 font-semibold">Англійська</p>
+                </div>
+                <div
+                  class="bg-white text-black shadow-xl rounded-xl w-full sm:w-[250px] h-[300px] flex flex-col items-center justify-center [box-shadow:6px_6px_3px_rgba(0,0,0,0.25)]"
+                >
+                  <img
+                    src="https://flagcdn.com/ua.svg"
+                    class="w-8 h-5"
+                    alt="ukrainian-flag-icon"
+                  />
+                  <p class="mt-4 font-semibold">Українська</p>
+                </div>
+              </div>
+
+              <div
+                class="flex justify-center gap-4 flex-wrap w-full shrink-0 px-6 md:px-0"
+              >
+                <div
+                  class="bg-white text-black shadow-xl rounded-xl w-full sm:w-[250px] h-[300px] flex flex-col items-center justify-center [box-shadow:6px_6px_3px_rgba(0,0,0,0.25)]"
+                >
+                  <img
+                    src="https://flagcdn.com/pt.svg"
+                    class="w-8 h-5"
+                    alt="portuguese-flag-icon"
+                  />
+                  <p class="mt-4 font-semibold">Португальська</p>
+                </div>
+                <div
+                  class="bg-white text-black shadow-xl rounded-xl w-full sm:w-[250px] h-[300px] flex flex-col items-center justify-center [box-shadow:6px_6px_3px_rgba(0,0,0,0.25)]"
+                >
+                  <img
+                    src="https://flagcdn.com/es.svg"
+                    class="w-8 h-5"
+                    alt="spanish-flag-icon"
+                  />
+                  <p class="mt-4 font-semibold">Іспанська</p>
+                </div>
+                <div
+                  class="bg-white text-black shadow-xl rounded-xl w-full sm:w-[250px] h-[300px] flex flex-col items-center justify-center [box-shadow:6px_6px_3px_rgba(0,0,0,0.25)]"
+                >
+                  <img
+                    src="https://flagcdn.com/cn.svg"
+                    class="w-8 h-5"
+                    alt="chinese-flag-icon"
+                  />
+                  <p class="mt-4 font-semibold">Китайська</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center gap-6 mt-4 sm:hidden">
+            <button onclick="slideCarousel(-1)">
+              <img
+                src="../../svg/arrow.svg"
+                alt="arrow-left-icon"
+                class="rotate-180 w-6 h-6"
+              />
+            </button>
+            <button onclick="slideCarousel(1)">
+              <img src="../../svg/arrow.svg" alt="arrow-icon" class="w-6 h-6" />
+            </button>
+          </div>
+        </div>
+
+        <button onclick="slideCarousel(1)" class="hidden sm:block">
+          <img src="../../svg/arrow.svg" alt="arrow-icon" class="w-6 h-6" />
+        </button>
+      </div>
+    </section>
+
+    <footer class="bg-[#e5d3fb] text-black mt-12 py-6 w-full">
+      <div
+        class="max-w-5xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center text-sm w-full"
+      >
+        <div
+          class="bg-white rounded-xl p-4 shadow flex items-center justify-around [box-shadow:6px_6px_3px_rgba(0,0,0,0.25)]"
+        >
+          <img src="../../svg/call.svg" alt="call-icon" />
+          <div>
+            <p class="font-semibold">Мої контактні дані:</p>
+            <p>m.sidenko@ukr.net</p>
+            <p>+38012345678</p>
+          </div>
+          <img src="../../svg/envelope.svg" alt="envelope-icon" />
+        </div>
+        <div
+          class="bg-white rounded-xl p-4 shadow flex items-center justify-around [box-shadow:6px_6px_3px_rgba(0,0,0,0.25)]"
+        >
+          <img src="../../svg/location.svg" alt="location-icon" />
+          <div>
+            <p class="font-semibold">Адреса:</p>
+            <p>65113, м. Одеса, просп.</p>
+            <p>Князя Ярослава Мудрого</p>
+            <p>(Академіка Глушка), 1-г</p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl p-4 shadow [box-shadow:6px_6px_3px_rgba(0,0,0,0.25)]"
+        >
+          <p class="font-semibold">Мої соціальні мережі:</p>
+          <div class="flex justify-center gap-2 mt-[15px]">
+            <div class="flex justify-center w-10/12">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="../../svg/facebook.svg"
+                  alt="facebook-icon"
+                  class="w-[40px] h-[40px] icon-hover"
+                />
+              </a>
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="../../svg/twitter.svg"
+                  alt="twitter-icon"
+                  class="w-[40px] h-[40px] icon-hover"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="../../svg/instagram.svg"
+                  alt="instagram-icon"
+                  class="w-[40px] h-[40px] icon-hover"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="languages.js"></script>
+    <script src="../../global.js"></script>
+  </body>
+</html>
